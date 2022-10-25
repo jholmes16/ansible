@@ -11,6 +11,7 @@
     - name: Display the encrypted variable
       debug:
         msg: "{{ secret }}"
+      no_log: true
 
     - user:
         name: "{{ username['test']['uname'] }}"
