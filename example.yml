@@ -15,4 +15,5 @@
     - user:
         name: "{{ username['test']['uname'] }}"
         comment: "{{ username['test']['description'] }}"
+        password: "{{ username['test']['password'] }}"
         state: present
