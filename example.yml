@@ -5,7 +5,14 @@
 
   tasks:
     - name: User gets created
-      user:
+      include_vars:
+        file: secret
+
+    - name: Display the encrypted variable
+      debug:
+        msg: "{{ secret }}"
+
+    - user:
         name: "{{ username['test']['uname'] }}"
         comment: "{{ username['test']['description'] }}"
         state: present
