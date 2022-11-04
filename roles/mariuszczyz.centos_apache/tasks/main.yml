@@ -30,3 +30,9 @@
     name: httpd
     state: started
     enabled: yes
+
+- name: Stop apache once demo is compelete
+  service:
+    name: httpd
+    state: stopped
+    enabled: no
