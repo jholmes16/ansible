@@ -1,0 +1,7 @@
+---
+- name: New user are created
+  hosts: webservers
+  become: True
+
+  roles:
+    - { role: mariuszczyz.centos_apache, tags: ["centos_apache"] }
